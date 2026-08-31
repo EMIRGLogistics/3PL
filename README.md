@@ -116,28 +116,6 @@ p{margin:0 0 1em}
 .hd h2{max-width:16ch}
 .hd .lede{max-width:38ch;margin:0}
 
-/* ledger */
-.ledger{border-top:1px solid var(--line)}
-.led-row{
-  display:grid;grid-template-columns:92px 1fr 1fr 1.15fr;gap:clamp(12px,2.5vw,28px);align-items:center;
-  padding:20px 4px;border-bottom:1px solid var(--line);transition:background .25s ease,padding-left .25s ease;
-}
-.led-row:hover{background:rgba(92,201,188,.06);padding-left:14px}
-.led-row .when{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--glass)}
-.led-row .who{font-size:15.5px;color:var(--bone)}
-.led-row .res{font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:-.012em;color:var(--brass)}
-@media(max-width:820px){
-  .led-row{grid-template-columns:1fr;gap:6px;padding:20px 0}
-  .led-row .res{margin-top:6px}
-  .led-row:hover{padding-left:0}
-}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:56px;background:var(--line)}
-.stat{background:var(--ink);padding:26px 22px}
-.sect-alt .stat{background:var(--ink-1)}
-.stat b{display:block;font-family:var(--display);font-size:clamp(30px,3.6vw,42px);font-weight:600;line-height:1;letter-spacing:-.035em;margin-bottom:10px}
-.stat span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-@media(max-width:700px){.stats{grid-template-columns:1fr 1fr}}
-
 /* events */
 .events{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;background:var(--line)}
 .grid-2{grid-template-columns:repeat(2,1fr)}
@@ -260,8 +238,7 @@ select option{background:var(--ink-1);color:var(--bone)}
     </a>
     <nav class="nav" aria-label="Main">
       <a href="#club">The club</a>
-      <a href="#evenings">Evenings</a>
-      <a href="#ledger">The ledger</a>
+      <a href="#evenings">The rooms</a>
       <a href="#membership">Membership</a>
       <a href="#faq">Questions</a>
     </nav>
@@ -277,7 +254,7 @@ select option{background:var(--ink-1);color:var(--bone)}
   <div class="wrap hero-in">
     <p class="eyebrow">Toronto, Ontario · By application · Est. 2023</p>
     <h1>Toronto is a small city, <em>once you know the right forty people.</em></h1>
-    <p class="lede">A private social club for founders, operators and the people who fund them. Twelve seats at a long table, a rooftop in July, and a room where nobody is wearing a name tag.</p>
+    <p class="lede">A private club for founders, operators and the people who fund them. No lanyards, no pitch decks.</p>
     <div class="hero-cta">
       <a class="btn btn-solid" href="#apply">Request membership</a>
       <a class="btn btn-ghost" href="#evenings">See the calendar</a>
@@ -295,29 +272,29 @@ select option{background:var(--ink-1);color:var(--bone)}
         <p class="eyebrow">What this is</p>
         <h2>Not a networking event. A club that happens to be useful.</h2>
       </div>
-      <p class="lede">Most rooms in this city sell you a ticket, hand you a lanyard and let you fend for yourself. We seat you. We know what you're building. We know who else is in the room.</p>
+      <p class="lede">Most rooms sell you a ticket and let you fend for yourself. We seat you.</p>
     </div>
 
     <div class="events grid-2 rv">
       <article class="ev">
         <div class="cad"><span>Principle 01</span><span>Seating</span></div>
         <h3>Every seat is assigned</h3>
-        <p>Nobody sits beside a competitor, and nobody sits beside the person they came with. The seating chart is the product.</p>
+        <p>Never beside a competitor, never beside the person you came with.</p>
       </article>
       <article class="ev">
         <div class="cad"><span>Principle 02</span><span>Scale</span></div>
         <h3>Small on purpose</h3>
-        <p>Dinners cap at twelve, and the membership is capped too. When we grow, we grow the calendar — not the room.</p>
+        <p>Dinners cap at twelve. We grow the calendar, not the room.</p>
       </article>
       <article class="ev">
         <div class="cad"><span>Principle 03</span><span>Discretion</span></div>
         <h3>Nothing leaves the table</h3>
-        <p>No photography at dinners, no press, no recording. Members talk about live deals here because they can.</p>
+        <p>No photos, no press, no recording. Live deals get discussed here.</p>
       </article>
       <article class="ev">
         <div class="cad"><span>Principle 04</span><span>Reciprocity</span></div>
         <h3>Give before you take</h3>
-        <p>The committee tracks introductions made, not just attended. Members who only collect don't get renewed.</p>
+        <p>We track introductions made, not nights attended.</p>
       </article>
     </div>
   </div>
@@ -328,101 +305,43 @@ select option{background:var(--ink-1);color:var(--bone)}
   <div class="wrap">
     <div class="hd rv">
       <div>
-        <p class="eyebrow">The calendar</p>
-        <h2>Five formats, roughly thirty nights a year.</h2>
+        <p class="eyebrow">The rooms</p>
+        <h2>Five rooms. Each one smaller than the last.</h2>
       </div>
-      <p class="lede">Each format does one job. Members pick the ones that fit the season they're in.</p>
+      <p class="lede">Nothing here seats more than twelve. Members move inward as they give.</p>
     </div>
 
     <div class="events rv">
       <article class="ev">
-        <div class="cad"><span>Monthly</span><span>12 seats</span></div>
-        <h3>The Round Table</h3>
-        <p>One long table, one question, and a chef cooking a few feet away while you argue about it. Seats assigned by the committee the morning of.</p>
+        <div class="cad"><span>01 · Quarterly</span><span>12 seats</span></div>
+        <h3>First Table</h3>
+        <p>The way in. The only room you can sit in without a sponsor.</p>
         <div class="where">Private room · Distillery District</div>
       </article>
       <article class="ev">
-        <div class="cad"><span>May – September</span><span>60 guests</span></div>
-        <h3>Harbour Hours</h3>
-        <p>Sunset to close on a rooftop over the lake. The only evening where members bring guests freely — bring the person you've been meaning to introduce.</p>
-        <div class="where">Rooftop terrace · Harbourfront</div>
+        <div class="cad"><span>02 · Monthly</span><span>12 seats</span></div>
+        <h3>The Round Table</h3>
+        <p>One table, one question, a chef a few feet away. Seats assigned that morning.</p>
+        <div class="where">Private room · Distillery District</div>
       </article>
       <article class="ev">
-        <div class="cad"><span>Six times a year</span><span>30 guests</span></div>
-        <h3>The Cellar</h3>
-        <p>One operator tells the whole story of one deal — the ugly middle included — off the record and unedited. Whisky, then questions until they run out.</p>
-        <div class="where">Lower bar · Yorkville</div>
-      </article>
-      <article class="ev">
-        <div class="cad"><span>Quarterly</span><span>Members + 1</span></div>
+        <div class="cad"><span>03 · Quarterly</span><span>10 seats</span></div>
         <h3>The Exchange</h3>
-        <p>Bring the thing you're stuck on, written on a card. Ninety minutes later you leave with three names and a reason each one will take your call.</p>
+        <p>Bring what you're stuck on. Leave with three names who'll take your call.</p>
         <div class="where">Boardroom floor · Financial District</div>
       </article>
-      <article class="ev ev-wide">
-        <div class="cad"><span>Once a year</span><span>24 members</span></div>
-        <h3>Off-Book</h3>
-        <p>Two nights out of the city in Prince Edward County. No agenda, no programming, no phones at dinner. Members consistently rate it the reason they renew.</p>
-        <div class="where">Country house · Prince Edward County · Applications open in March</div>
+      <article class="ev">
+        <div class="cad"><span>04 · Six a year</span><span>8 seats</span></div>
+        <h3>The Cellar</h3>
+        <p>One operator, one deal, told unedited and off the record. Whisky, then questions.</p>
+        <div class="where">Lower bar · Yorkville · By invitation</div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- LEDGER -->
-<section class="sect sect-alt" id="ledger">
-  <div class="wrap">
-    <div class="hd rv">
-      <div>
-        <p class="eyebrow">The ledger</p>
-        <h2>What actually came of it.</h2>
-      </div>
-      <p class="lede">A running record of introductions the club made, kept deliberately vague about who — and deliberately specific about what happened next.</p>
-    </div>
-
-    <div class="ledger rv">
-      <div class="led-row">
-        <span class="when">Jun 2026</span>
-        <span class="who">Founder, logistics software</span>
-        <span class="who">Partner, growth fund</span>
-        <span class="res">A term sheet, eleven weeks later.</span>
-      </div>
-      <div class="led-row">
-        <span class="when">May 2026</span>
-        <span class="who">Restaurateur, three rooms on Ossington</span>
-        <span class="who">Retail leasing lawyer</span>
-        <span class="res">A fourth room, on Queen West.</span>
-      </div>
-      <div class="led-row">
-        <span class="when">Apr 2026</span>
-        <span class="who">Fractional CFO</span>
-        <span class="who">Manufacturer scaling past $20M</span>
-        <span class="res">A finance function, built in ninety days.</span>
-      </div>
-      <div class="led-row">
-        <span class="when">Mar 2026</span>
-        <span class="who">Design studio owner</span>
-        <span class="who">CPG founder, national grocery launch</span>
-        <span class="res">A rebrand, and a shelf.</span>
-      </div>
-      <div class="led-row">
-        <span class="when">Feb 2026</span>
-        <span class="who">Clinic group, four locations</span>
-        <span class="who">Health tech founder</span>
-        <span class="res">A pilot, then a purchase order.</span>
-      </div>
-      <div class="led-row">
-        <span class="when">Jan 2026</span>
-        <span class="who">Second-time founder, exited 2024</span>
-        <span class="who">Two operators between things</span>
-        <span class="res">A founding team, assembled over dinner.</span>
-      </div>
-    </div>
-
-    <div class="stats rv">
-      <div class="stat"><b>30</b><span>Nights a year</span></div>
-      <div class="stat"><b>55</b><span>Introductions made</span></div>
-      <div class="stat"><b>63%</b><span>Founders &amp; owners</span></div>
+      <article class="ev ev-wide">
+        <div class="cad"><span>05 · Once a year</span><span>6 members</span></div>
+        <h3>Off-Book</h3>
+        <p>Two nights away, no agenda, no phones at dinner. The last room, and the one members earn.</p>
+        <div class="where">Country house · Prince Edward County · By invitation only</div>
+      </article>
     </div>
   </div>
 </section>
@@ -435,7 +354,7 @@ select option{background:var(--ink-1);color:var(--bone)}
         <p class="eyebrow">Membership</p>
         <h2>Dues, and what they buy.</h2>
       </div>
-      <p class="lede">Annual, billed once. Dues cover food, rooms and staff — the club takes no sponsorship money, because sponsors change who's in the room.</p>
+      <p class="lede">Billed once a year. No sponsors — sponsors change who's in the room.</p>
     </div>
 
     <div class="tiers rv">
@@ -445,9 +364,8 @@ select option{background:var(--ink-1);color:var(--bone)}
         <div class="per">per year</div>
         <ul>
           <li>For businesses under three years old</li>
-          <li>Harbour Hours and The Exchange</li>
+          <li>First Table and The Exchange</li>
           <li>Two Round Table seats a year</li>
-          <li>Member directory access</li>
         </ul>
         <a class="btn btn-ghost" href="#apply" style="border-color:rgba(12,27,36,.25);color:#0c1b24">Apply as associate</a>
       </div>
@@ -460,8 +378,7 @@ select option{background:var(--ink-1);color:var(--bone)}
           <li>The entire calendar, every format</li>
           <li>Priority seating at Round Tables</li>
           <li>Two guest passes each quarter</li>
-          <li>Direct introductions from the committee</li>
-          <li>Eligible for Off-Book</li>
+          <li>Introductions from the committee</li>
         </ul>
         <a class="btn btn-solid" href="#apply">Apply for membership</a>
       </div>
@@ -473,8 +390,7 @@ select option{background:var(--ink-1);color:var(--bone)}
         <ul>
           <li>Everything in full membership</li>
           <li>Host your own Round Table</li>
-          <li>Concierge introductions, on request</li>
-          <li>Reciprocal access to partner clubs</li>
+          <li>Concierge introductions</li>
           <li>A voice in who gets admitted</li>
         </ul>
         <a class="btn btn-ghost" href="#apply" style="border-color:rgba(12,27,36,.25);color:#0c1b24">Enquire about the circle</a>
@@ -488,22 +404,22 @@ select option{background:var(--ink-1);color:var(--bone)}
         <div class="step">
           <span class="num">01 / Apply</span>
           <h3>Tell us what you're building</h3>
-          <p>Ten minutes. What you run, what you're looking for, and who you could help.</p>
+          <p>What you run, and what you're looking for.</p>
         </div>
         <div class="step">
           <span class="num">02 / Conversation</span>
           <h3>Coffee with the committee</h3>
-          <p>Half an hour, in person where we can. It's a conversation, not an interview.</p>
+          <p>Half an hour. A conversation, not an interview.</p>
         </div>
         <div class="step">
           <span class="num">03 / Sponsorship</span>
           <h3>A member vouches</h3>
-          <p>If you don't know one yet, we'll seat you at an open evening so you can.</p>
+          <p>Don't know one? We'll seat you at First Table.</p>
         </div>
         <div class="step">
           <span class="num">04 / Decision</span>
           <h3>The committee votes</h3>
-          <p>We meet the first Tuesday monthly. You'll hear either way within thirty days.</p>
+          <p>First Tuesday monthly. An answer within thirty days.</p>
         </div>
       </div>
     </div>
@@ -522,31 +438,23 @@ select option{background:var(--ink-1);color:var(--bone)}
     <div class="faq rv">
       <details class="qa">
         <summary>Do I need to know a member already?</summary>
-        <p>It helps, but no. About a third of members joined without a sponsor — we seat those applicants at an open evening first so they can meet a few people properly before the vote.</p>
+        <p>It helps, but no. A third joined without one — we seat those applicants at First Table.</p>
       </details>
       <details class="qa">
         <summary>Is this a pitch event?</summary>
-        <p>Pitching from a stage is banned. Pitching over dinner is what dinner is for. The difference matters: nobody performs here, but nobody pretends they aren't looking for something either.</p>
+        <p>Pitching from a stage is banned. Pitching over dinner is what dinner is for.</p>
       </details>
       <details class="qa">
         <summary>What's the real time commitment?</summary>
-        <p>Most members come to eight or nine evenings a year. Come to fewer than three and the club stops working for you — the value compounds with the number of people who recognise you.</p>
+        <p>Eight or nine evenings a year. Fewer than three and it stops working.</p>
       </details>
       <details class="qa">
         <summary>Can I bring a guest?</summary>
-        <p>Full members get two guest passes a quarter, plus open guest privileges at Harbour Hours. Guests can attend twice before they need to apply themselves.</p>
-      </details>
-      <details class="qa">
-        <summary>I'm not in Toronto full time. Is it worth it?</summary>
-        <p>Several members are based in Montreal, Calgary and New York and plan trips around the calendar. Tell us on your application and we'll flag the dates worth flying in for.</p>
-      </details>
-      <details class="qa">
-        <summary>What if I'm not admitted?</summary>
-        <p>You'll get a real answer about why, and an invitation to reapply when something changes. Roughly one in five applicants is admitted on a first application; a third of those declined and reapplied later got in.</p>
+        <p>Two passes a quarter, and guests are welcome at First Table. Twice, then they apply.</p>
       </details>
       <details class="qa">
         <summary>Are dues refundable?</summary>
-        <p>Dues are billed once a year and refundable pro rata within the first sixty days. After that we've already booked the rooms.</p>
+        <p>Refundable pro rata for sixty days. After that the rooms are booked.</p>
       </details>
     </div>
   </div>
@@ -558,15 +466,15 @@ select option{background:var(--ink-1);color:var(--bone)}
     <div class="rv">
       <p class="eyebrow">Apply</p>
       <h2 style="margin-bottom:22px">Ten minutes, and then we'll talk.</h2>
-      <p class="lede">The committee reviews applications the first Tuesday of every month. The more specific you are about what you're looking for, the better we can seat you.</p>
+      <p class="lede">The more specific you are about what you're looking for, the better we can seat you.</p>
       <div class="contact-line">
-        <a href="#evenings">Come to an open evening first</a>
-        <a href="#faq">Read the questions members ask</a>
+        <a href="#evenings">Start at First Table</a>
+        <a href="#faq">Read the common questions</a>
       </div>
     </div>
 
     <div class="rv">
-      <div class="form" id="formWrap">
+      <form class="form" id="formWrap" novalidate>
         <div>
           <label for="fn">First name</label>
           <input id="fn" name="fn" type="text" autocomplete="given-name" required>
@@ -602,20 +510,20 @@ select option{background:var(--ink-1);color:var(--bone)}
         </div>
         <div class="f-full">
           <label for="wh">What are you looking for this year?</label>
-          <textarea id="wh" name="wh" placeholder="Capital, a co-founder, a first enterprise customer, an operator who has done this before…"></textarea>
+          <textarea id="wh" name="wh" placeholder="Capital, a co-founder, a first customer…"></textarea>
         </div>
         <div class="f-full">
           <label for="sp">Sponsoring member, if you have one</label>
-          <input id="sp" name="sp" type="text" placeholder="Leave blank and we'll seat you at an open evening">
+          <input id="sp" name="sp" type="text" placeholder="Optional">
         </div>
         <div class="f-full" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-top:6px">
-          <button class="btn btn-solid" id="submitBtn" type="button">Send application</button>
-          <span class="form-note">Reviewed the first Tuesday of the month.<br>We reply either way within 30 days.</span>
+          <button class="btn btn-solid" id="submitBtn" type="submit">Send application</button>
+          <span class="form-note" id="formNote">Reviewed monthly. An answer within 30 days.</span>
         </div>
-      </div>
+      </form>
       <div class="sent" id="sent" hidden>
         <h3>Application received</h3>
-        <p>Thank you. The committee meets the first Tuesday of the month, and you'll hear from us either way within thirty days. If an open evening comes up before then, we'll send you a seat.</p>
+        <p>The committee meets the first Tuesday of the month. You'll hear from us within thirty days.</p>
       </div>
     </div>
   </div>
@@ -637,15 +545,13 @@ select option{background:var(--ink-1);color:var(--bone)}
         <h4>The club</h4>
         <ul>
           <li><a href="#club">What this is</a></li>
-          <li><a href="#evenings">Evenings</a></li>
-          <li><a href="#ledger">The ledger</a></li>
+          <li><a href="#evenings">The rooms</a></li>
           <li><a href="#membership">Membership</a></li>
         </ul>
       </div>
       <div>
         <h4>Elsewhere</h4>
         <ul>
-          <li><a href="#evenings">Open evenings</a></li>
           <li><a href="#apply">Apply</a></li>
           <li><a href="#faq">Questions</a></li>
           <li><a href="#top">House rules</a></li>
@@ -722,11 +628,48 @@ select option{background:var(--ink-1);color:var(--bone)}
     });
   }
 
-  /* application form */
-  var btn = document.getElementById('submitBtn'),
-      formWrap = document.getElementById('formWrap'),
+  /* application form -> brokieclub@outlook.com */
+  var INBOX = 'brokieclub@outlook.com';
+  var form = document.getElementById('formWrap'),
+      btn  = document.getElementById('submitBtn'),
+      note = document.getElementById('formNote'),
       sent = document.getElementById('sent');
-  btn.addEventListener('click', function(){
+
+  function collect(){
+    var f = function(id){ return (document.getElementById(id).value || '').trim(); };
+    return {
+      _subject: 'Network Toronto application — ' + f('fn') + ' ' + f('ln'),
+      _template: 'table',
+      _captcha: 'false',
+      Name: f('fn') + ' ' + f('ln'),
+      Email: f('em'),
+      Company: f('co'),
+      Role: f('ro'),
+      Membership: document.getElementById('ti').value,
+      Link: f('lk'),
+      'Looking for': f('wh'),
+      Sponsor: f('sp')
+    };
+  }
+
+  function showSent(){
+    form.hidden = true;
+    sent.hidden = false;
+    sent.scrollIntoView({block:'center', behavior: reduce ? 'auto' : 'smooth'});
+  }
+
+  /* If the network call can't go through, hand the application to the
+     applicant's own mail client addressed to the club, so nothing is lost. */
+  function mailtoFallback(d){
+    var body = Object.keys(d).filter(function(k){ return k.charAt(0) !== '_'; })
+      .map(function(k){ return k + ': ' + (d[k] || '—'); }).join('\n');
+    window.location.href = 'mailto:' + INBOX +
+      '?subject=' + encodeURIComponent(d._subject) +
+      '&body=' + encodeURIComponent(body);
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
     var required = ['fn','ln','em'], ok = true, first = null;
     required.forEach(function(id){
       var el = document.getElementById(id), good = el.value.trim() !== '';
@@ -735,9 +678,25 @@ select option{background:var(--ink-1);color:var(--bone)}
       if(!good){ ok = false; if(!first) first = el; }
     });
     if(!ok){ first.focus(); return; }
-    formWrap.hidden = true;
-    sent.hidden = false;
-    sent.scrollIntoView({block:'center', behavior: reduce ? 'auto' : 'smooth'});
+
+    var data = collect();
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    note.textContent = 'Sending your application…';
+
+    fetch('https://formsubmit.co/ajax/' + INBOX, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify(data)
+    })
+    .then(function(r){ if(!r.ok) throw new Error('bad response'); return r.json(); })
+    .then(function(){ showSent(); })
+    .catch(function(){
+      btn.disabled = false;
+      btn.textContent = 'Send application';
+      note.textContent = 'Opening your email app to send this to us directly…';
+      mailtoFallback(data);
+    });
   });
 })();
 </script>
